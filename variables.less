@@ -1,0 +1,27 @@
+@font-color: #000;
+
+.mp0() {
+    margin: 0;
+    padding: 0;
+}
+.default-font() {
+    font: 12px/1.5 "宋体", Arial, sans-serif;
+}
+.link-color-func(@link-color, @hover-color){
+	text-decoration: none;
+	color: @link-color;
+
+	&:link{
+		text-decoration: none;
+	}
+	&:visited{
+		text-decoration: none;
+	}
+	&:hover{
+		color: @hover-color;
+		text-decoration: underline;
+	}
+	&:active{
+		text-decoration: none;
+	}
+}
