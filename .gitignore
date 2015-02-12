@@ -1,3 +1,3 @@
 # Folder ignore
-_[Oo]utput/
+dist/
 node_modules/

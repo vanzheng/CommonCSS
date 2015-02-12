@@ -1,16 +1,55 @@
 ﻿@import "variables";
 
-/* common styles start */
 body {
     .mp0;
-    .default-font;
-    color: @font-color;
+    font: @default-font;
+    color: @default-font-color;
 }
-div, span, img, ul, li, ol, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, form, fieldset {
+div, 
+span, 
+img, 
+ul, 
+li, 
+ol, 
+dl, 
+dt, 
+dd, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+p, 
+form, 
+fieldset {
     .mp0;
 }
-img{
-	border: 0;
+
+// Reest HTML5 elements
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+}
+
+img {
+    border: 0;
 }
 li {
     list-style-type: none;
@@ -20,40 +59,30 @@ table {
     border-collapse: collapse;
 }
 a {
-    .link-color-func(#000, #000);
+    outline: none;
+    .link-color-func(@default-link-color, @default-link-hover-color);
 }
 
-.mt5{
-	margin-top: 5px;
+// Helpers
+.tgc {
+    text-align: center;
 }
-.mt10{
-	margin-top: 10px;
+.hidden {
+    display: none;
 }
-.mt20{
-	margin-top: 20px;
-}
-.padtop10{
-	padding-top: 10px;
-}
-.padtop20{
-	padding-top: 20px;
-}
-.mt25{
-	margin-top: 25px;
-}
-.tgc{
-	text-align: center;
-}
-.hide{
-	display: none;
+.clear {
+    display: block;
+    float: none;
+    clear: both;
 }
 .clearfix:after {
-    content:" ";
+    content: " ";
     display: block;
     height: 0;
     clear: both;
     visibility: hidden;
 }
 .clearfix {
-    *zoom: 1; /* IE6, IE7 hack */
+    *zoom: 1;
+    /* IE6, IE7 hack */
 }

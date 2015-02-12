@@ -1,12 +1,14 @@
-@font-color: #000;
+@default-font: 12px/1.5 "\5b8b\4f53", Arial, tahoma, sans-serif;  // 宋体
+@default-font-color: #000;
+@default-link-color: #000;
+@default-link-hover-color: #333;
+@default-link-visited-color: #000;
 
 .mp0() {
     margin: 0;
     padding: 0;
 }
-.default-font() {
-    font: 12px/1.5 "宋体", Arial, sans-serif;
-}
+
 .link-color-func(@link-color, @hover-color){
 	text-decoration: none;
 	color: @link-color;
@@ -19,7 +21,7 @@
 	}
 	&:hover{
 		color: @hover-color;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 	&:active{
 		text-decoration: none;
