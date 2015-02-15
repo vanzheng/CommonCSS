@@ -9,6 +9,9 @@ module.exports = function(grunt) {
                 }
             },
             production: {
+                options: {
+                    compress: true
+                },
                 files: {
                     'dist/common.min.css': 'common.less'
                 }
